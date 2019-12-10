@@ -35,4 +35,4 @@ def login():
     return render_template('login.html', error=error) #mysql_table()
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080)
+    app.run(host='0.0.0.0', port=8085)
