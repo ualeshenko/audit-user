@@ -3,40 +3,47 @@
 	<head>
 		<title> Table </title>
 		<style>
+ 		  table, th, tr,td {
+	            border: 2px solid black;
+		    }
                   table {
 	            border-collapse: collapse;
 	            width: 100%;
 		    color: #588c7e;
 		    font-family: monospace;
-	            font-size: 21px;
+	            font-size: 12px;
 	            text-align: left;
 		    }
 		  th {
                     background-color: #588c7e;
 		    color: white;
 	            }
-		  tr:nth-child(even)
+		  <!-- tr:nth-child(even) 
 		     {
-                    background-color: #f2f2f2
+                     background-color: #f2f2f2
 
-		    }
+		     } -->
 		</style>
 	</head>
 <body>
 <table>
     <thead>
     <tr>
-        <th>Host ID</th>
+        <th>ID Motherboard</th>
+	<th>Timestamp</th>
         <th>Hostname</th>
+	<th>IPv4</th>
 	<th>Users</th>
     </tr>
     </thead>
     <tbody>
         {% for row in data %} 
             <tr>
-                <td>{{row[0]}}</td>
-                <td>{{row[1]}}</td>
-                <td>{{row[2]}}</td>
+		<td>{{row[0]}}</td>
+		<td>{{row[1]}}</td>
+		<td>{{row[2]}}</td>
+		<td>{{row[3]}}</td>
+                <td>{{row[4]}}</td>
             </tr>
         {% endfor %}
     </tbody>
